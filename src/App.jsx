@@ -10,6 +10,11 @@ import NewSkillForm from './assets/NewSkillForm/NewSkillForm'
 
 function App() {
 
+  function handleAddSkill(skillInput) {
+    setSkills([skillInput, ...skills])
+  }
+
+
   const [skills, setSkills] = useState([
     { name: "HTML", level: 5 },
     { name: "CSS", level: 3 },
@@ -22,7 +27,7 @@ function App() {
     <h1>React Dev Skills</h1>
     <SkillList skillList={skills}/>
     <hr />
-    <NewSkillForm />
+    <NewSkillForm handleAddSkill={handleAddSkill}/>
     </>
     
   )
