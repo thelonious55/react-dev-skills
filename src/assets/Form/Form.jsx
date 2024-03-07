@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 
-
+// I couldnt get this to actually submit a new skill to the list, gonna keep trying
 
 export default function Form(handleAddSkill) {
 
